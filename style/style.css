@@ -38,6 +38,8 @@
         padding: 10px;
         width: 200px;
         border-radius: 20px;
+
+        transition: 0.5s all;
     }
 
     .btn--vinculo:hover{
@@ -92,6 +94,10 @@
         text-align: center;
     }
 
+    li{
+        text-align: center;
+    }
+
 /* Estilos del Header */
 
     .header{
@@ -111,9 +117,8 @@
         display: inline-block;
     }
 
-    .header__navegacion{
-        display: flex;
-        justify-content: center;
+    .navbar-collapse{
+        justify-content: end;
         align-items: center;
     }
 
@@ -123,9 +128,15 @@
     }
 
     .header__navegacion__lista__elemento{
-        text-decoration: none;
+        color: white ;
+        
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+
+    .header__navegacion__lista__elemento:hover{
         color: white;
-        padding: 10px;
+        background-color: #0f233d;
     }
 
 /* Estilos del Main */
@@ -175,7 +186,6 @@
 
     .main__contenido__prodDestacados{
         padding: 30px;
-        width: 60%;
     }
 
     .prodDestacados--position {
@@ -201,7 +211,7 @@
             grid-template-rows: 1fr;
             grid-template-areas: "buscador titulo";
 
-            width: 70%;
+            width: 100%;
             padding: 20px;
         }
         
@@ -230,15 +240,10 @@
 
         .main__contenido__productos{
             flex-wrap: wrap;
-            width: 70%;
         }
         
 
     /* Sección Sobre Nosotros */
-
-        .main__contenido__sobreNosotros{
-            width: 60%;
-        }
 
         .main__contenido__sobreNosotros--grid{
             display: grid;
@@ -263,7 +268,6 @@
         }
 
         .main__contenido--sobreNosotros{
-            width: 70%;
             padding-top: 20px;
         }
 
@@ -316,7 +320,6 @@
 
         .main__contenido__marcas{
             margin-top: 50px;
-            width: 70%;
         }
 
         .main__contenido__marcas__titulo{
@@ -340,10 +343,6 @@
         .main__contenido__galeria__txt{
             grid-area: galeria;
             padding: 20px;
-        }
-
-        .main__contenido__galeria{
-            width: 70%;
         }
 
         .main__contenido__galeria__titulo{
@@ -379,10 +378,12 @@
     /* Sección Contacto */
 
         .main__contenido__tituloContacto{
+            text-align: center;
             padding-top: 20px;
         }
 
         .main__contenido__parrafoContacto{
+            text-align: center;
             padding-top: 20px;
         }
 
@@ -395,10 +396,6 @@
             grid-area: botonContacto;
             align-self: start;
             padding-bottom: 20px;
-        }
-
-        .main__contenido__datosDeLaTienda{
-            width: 70%;
         }
 
         .main__contenido__datosDeLaTienda--grid{
@@ -434,6 +431,7 @@
         }
 
         .main__contenido__parrafo{
+            text-align: center;
             padding-top: 50px;
         }
 
@@ -444,7 +442,6 @@
         .main__contenido__formulario--grid{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
             grid-template-areas: "nombre correo"
                                  "descripcion descripcion"
                                  "btn btn";
@@ -499,6 +496,7 @@
 
     .footer__copyrigth__texto{
         padding-top: 10px;
+        margin-bottom: 0px;
         text-align: center;
     }
 
