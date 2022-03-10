@@ -58,6 +58,10 @@
         border: 2px solid #1f487e;
     }
 
+    .info-display{
+        display: flex;
+    }
+
     .card{
         width: 300px;
         border: 2px solid black;
@@ -196,11 +200,44 @@
     }
 
     .main__contenido__info{
-        padding: 20px;
-        background-color: #EAD2AC;
-        color: black;
-        width: 100%;
-        border-top: 1px solid black;
+        padding-top: 20px;
+    }
+
+    .main__contenido__info--centrado{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main__contenido__info__sobreNosotros{
+        background-image: url("../Imagenes/info__sobreNosotros.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+        width: 100vw;
+        height: 75vh;
+    }
+
+    .main__contenido__info__galeria{
+        background-image: url("../Imagenes/info__galeria.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+        width: 100vw;
+        height: 75vh;
+    }
+
+    .main__contenido__info__contacto{
+        background-image: url("../Imagenes/info__contacto.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+        width: 100vw;
+        height: 75vh;
     }
 
     /* Sección Productos */
@@ -258,8 +295,10 @@
         }
 
         .main__contenido__sobreNosotros__txt{
-            grid-area: sobreNosotros;
+            color: white;
+            font-size: 30px;
             padding: 20px;
+            text-align: center;
         }
 
         .main__contenido__sobreNosotros__btn{
@@ -336,13 +375,14 @@
     /* Sección Galeria */
 
         .main__contenido__galeria__btn{
-            grid-area: botonGaleria;
             padding-bottom: 20px;
         }
 
         .main__contenido__galeria__txt{
-            grid-area: galeria;
             padding: 20px;
+            color: white;
+            font-size: 30px;
+            text-align: center;
         }
 
         .main__contenido__galeria__titulo{
@@ -388,13 +428,14 @@
         }
 
         .main__contenido__contacto__txt{
-            grid-area: contacto;
             padding: 20px;
+            color: white;
+            font-size: 30px;
+            text-align: center;
         }
 
         .main__contenido__contacto__btn{
             grid-area: botonContacto;
-            align-self: start;
             padding-bottom: 20px;
         }
 
@@ -501,7 +542,13 @@
     }
 
 
-/* Tamaño de pantalla de 930PX */
+/* Tamaño de pantalla */
+
+    @media only screen and (max-width: 400px){
+        .main__contenido__sobreNosotros__txt, .main__contenido__galeria__txt, .main__contenido__contacto__txt{
+            font-size: 20px;
+        }
+    }
 
     @media only screen and (max-width: 930px){
         .header--grid{
@@ -541,6 +588,10 @@
 
         .card{
             margin-bottom: 40px;
+        }
+
+        .info-display{
+            display: block;
         }
     }
 
