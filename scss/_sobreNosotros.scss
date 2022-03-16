@@ -1,0 +1,63 @@
+.main{
+    .main__contenido{
+        .main__contenido--sobreNosotros{
+            padding-top: 20px;
+            .main__contenido__titulo{
+                text-align: center;
+            }
+            .main__contenido__texto{
+                padding-top: 20px;
+                text-align: justify;
+            }
+        }
+
+        .main__contenido__servicio__titulo{
+            padding-top: 20px;
+            grid-area: titulo;
+            text-align: center;
+            align-self: center;
+        }
+        .main__contenido__servicio{
+            padding-top: 20px;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .main__contenido__servicio--grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "calidad precio";
+
+                justify-items: center;
+                width: 70%;
+                @media only screen and (max-width: 990px){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .main__contenido__servicio__calidad{
+                    grid-area: calidad;
+                }
+                .main__contenido__servicio__precio{
+                    grid-area: precio;
+                }
+            }
+        }
+
+        .main__contenido__marcas{
+            margin-top: 50px;
+            .main__contenido__marcas__titulo{
+                text-align: center;
+            }
+            .main__contenido__marcas--marcas{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

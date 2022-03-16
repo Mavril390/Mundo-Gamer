@@ -1,0 +1,129 @@
+.main {
+    background-color: #e9e9e9;
+    overflow: hidden;
+    .main__inicio {
+        background-image: url("../Imagenes/setup-gamer-luces.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 90vh;
+        .main__inicio--grid {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            .main__inicio__titulo {
+                color: white;
+                text-align: center;
+                font-weight: bold;
+                font-size: 60px;
+                align-self: end;
+            }
+            .main__inicio__tituloSegundo {
+                color: white;
+                text-align: center;
+                font-weight: normal;
+                align-self: start;
+            }
+        }
+    }
+    .main__contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .main__contenido__prodDestacados {
+            padding: 30px;
+            .prodDestacados--position {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .main__contenido__info {
+            padding-top: 20px;
+            .main__contenido__info--centrado {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .main__contenido__info__sobreNosotros {
+                background-image: url("../Imagenes/info__sobreNosotros.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            
+                width: 100vw;
+                height: 75vh;
+                .main__contenido__info--centrado{
+                    .main__contenido__sobreNosotros__txt{
+                        color: white;
+                        font-size: 30px;
+                        padding: 20px;
+                        text-align: center;
+                        @media only screen and (max-width: 400px){
+                            font-size: 20px;
+                        }
+                    }
+                    .main__contenido__sobreNosotros__btn{
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+
+            .main__contenido__info__galeria{
+                background-image: url("../Imagenes/info__galeria.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            
+                width: 100vw;
+                height: 75vh;
+                .main__contenido__info--centrado{
+                    .info-display{
+                        .main__contenido__galeria__txt{
+                            padding: 20px;
+                            color: white;
+                            font-size: 30px;
+                            text-align: center;
+                            @media only screen and (max-width: 400px){
+                                font-size: 20px;
+                            }
+                        }
+                        .main__contenido__galeria__btn{
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+
+            .main__contenido__info__contacto{
+                background-image: url("../Imagenes/info__contacto.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            
+                width: 100vw;
+                height: 75vh;
+                .main__contenido__info--centrado{
+                    .info-display{
+                        .main__contenido__contacto__txt{
+                            padding: 20px;
+                            color: white;
+                            font-size: 30px;
+                            text-align: center;
+                            @media only screen and (max-width: 400px){
+                                font-size: 20px;
+                            }
+                        }
+                        .main__contenido__contacto__btn{
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

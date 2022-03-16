@@ -1,0 +1,39 @@
+.main{
+    .main__contenido{
+        .main__contenido__galeria{
+            .main__contenido__galeria__titulo{
+                text-align: center;
+                margin: 20px;
+            }
+            .main__contenido__galeria--grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas: "1 2"
+                                    "3 4"
+                                    "5 6"
+                                    "7 8"
+                                    "9 10"
+                                    "11 12";
+                
+                justify-items: center;
+                @media only screen and (max-width: 1100px){
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .galeria-img{
+                    width: 95%;
+                    padding: 20px;
+
+                    transition: all 1s;
+
+                    &:hover{
+                        transform: scale(1.1, 1.1);
+                    }
+                }
+            }
+        }
+    }
+}

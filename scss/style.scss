@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Estilos reutilizables */
+
+.fondoNegro {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+}
+
+.posicionInlineBlock {
+    display: inline-block;
+}
+
+.posicionBlock {
+    display: block;
+}
+
+.producto {
+    padding: 30px;
+}
+
+.producto__img {
+    border: 2px solid #1f487e;
+    width: 175px;
+    height: 175px;
+}
+
+.btn--vinculo {
+    background-color: #376996;
+    border: 1px solid black;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+
+    transition: 0.5s all;
+
+    &:hover {
+        background-color: #d8d4d5;
+        color: #1f487e;
+    }
+}
+
+.elementoCentrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hr {
+    margin: 10px;
+    border: 2px solid #1f487e;
+}
+
+.info-display {
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ead2ac;
+    box-shadow: 0 5px 20px 0 black;
+
+    transition: all 1s;
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.card__titulo {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.card__parrafo {
+    text-align: justify;
+}
+
+.producto {
+    transition: all 1s;
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.TextCenter {
+    text-align: center;
+}
+
+li {
+    text-align: center;
+}
+
+.formulario__100w{
+    width: 100%;
+}
+
+/* Estilos del Header */
+@import "header";
+
+/* Estilos del Main */
+@import "main";
+
+/* Sección Productos */
+@import "productos";
+
+/* Sección Sobre Nosotros */
+@import "sobreNosotros";
+
+/* Sección Galeria */
+@import "galeria";
+
+/* Sección Contacto */
+@import "contacto";
+
+/* Estilos del Footer */
+@import "footer";
+
+/* Tamaño de pantalla */
+
+@media only screen and (max-width: 990px){
+    li{
+        margin: 10px;
+    }
+    
+    .main__contenido__sobreNosotros--grid{
+        display: block;
+    }
+
+    .main__contenido--grid{
+        display: contents;
+    }
+
+    .main__contenido__titulo{
+        padding: 20px 0
+    }
+
+    .card{
+        margin-bottom: 40px;
+    }
+
+    .info-display{
+        display: block;
+    }
+}
