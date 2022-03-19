@@ -1,12 +1,12 @@
 .main{
     .main__contenido{
         .main__contenido__tituloContacto{
-            text-align: center;
-            padding-top: 20px;
+            text-align: $valorCentro;
+            padding-top: $padding20px;
         }
         .main__contenido__parrafoContacto{
-            text-align: center;
-            padding-top: 20px;
+            text-align: $valorCentro;
+            padding-top: $padding20px;
         }
         .main__contenido__datosDeLaTienda{
             .main__contenido__datosDeLaTienda--grid{
@@ -16,18 +16,18 @@
                 grid-template-areas: "correo ubicacion"
                                     "telefono ubicacion";
 
-                justify-items: center;
-                align-items: center;
+                justify-items: $valorCentro;
+                align-items: $valorCentro;
                 @media only screen and (max-width: 1100px){
                     display: block;
                 }
                 .datosDeLaTienda__correo{
                     grid-area: correo;
-                    padding: 20px;
+                    padding: $padding20px;
                 }
                 .datosDeLaTienda__telefono{
                     grid-area: telefono;
-                    padding: 20px;
+                    padding: $padding20px;
                 }
                 .datosDeLaTienda__ubicacion{
                     grid-area: ubicacion;
@@ -41,7 +41,7 @@
             }
         }
         .main__contenido__parrafo{
-            text-align: center;
+            text-align: $valorCentro;
             padding-top: 50px;
         }
         .main__contenido__formulario{
@@ -53,8 +53,8 @@
                                      "descripcion descripcion"
                                      "btn btn";
             
-                justify-items: center;
-                align-items: center;
+                justify-items: $valorCentro;
+                align-items: $valorCentro;
                 column-gap: 50px;
                 @media only screen and (max-width: 1100px){
                     display: block;
@@ -63,26 +63,26 @@
                     grid-area: nombre;
                     width: 100%;
                     @media only screen and (max-width: 1100px){
-                        padding: 20px;
+                        padding: $padding20px;
                     }
                 }
                 .formulario__correo{
                     grid-area: correo;
                     width: 100%;
                     @media only screen and (max-width: 1100px){
-                        padding: 20px;
+                        padding: $padding20px;
                     }
                 }
                 .formulario__descripcion{
                     grid-area: descripcion;
                     width: 100%;
                     @media only screen and (max-width: 1100px){
-                        padding: 20px;
+                        padding: $padding20px;
                     }
                 }
                 .formulario__btn{
                     grid-area: btn;
-                    padding: 20px;
+                    padding: $padding20px;
                 }
             }
         }

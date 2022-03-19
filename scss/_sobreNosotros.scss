@@ -1,42 +1,42 @@
 .main{
     .main__contenido{
         .main__contenido--sobreNosotros{
-            padding-top: 20px;
+            padding-top: $padding20px;
             .main__contenido__titulo{
-                text-align: center;
+                text-align: $valorCentro;
             }
             .main__contenido__texto{
-                padding-top: 20px;
+                padding-top: $padding20px;
                 text-align: justify;
             }
         }
 
         .main__contenido__servicio__titulo{
-            padding-top: 20px;
+            padding-top: $padding20px;
             grid-area: titulo;
-            text-align: center;
-            align-self: center;
+            text-align: $valorCentro;
+            align-self: $valorCentro;
         }
         .main__contenido__servicio{
-            padding-top: 20px;
+            padding-top: $padding20px;
             width: 100%;
 
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: $valorCentro;
+            align-items: $valorCentro;
             flex-direction: column;
             .main__contenido__servicio--grid{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-areas: "calidad precio";
 
-                justify-items: center;
+                justify-items: $valorCentro;
                 width: 70%;
                 @media only screen and (max-width: 990px){
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: $valorCentro;
+                    align-items: $valorCentro;
                 }
                 .main__contenido__servicio__calidad{
                     grid-area: calidad;
@@ -50,13 +50,13 @@
         .main__contenido__marcas{
             margin-top: 50px;
             .main__contenido__marcas__titulo{
-                text-align: center;
+                text-align: $valorCentro;
             }
             .main__contenido__marcas--marcas{
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
+                justify-content: $valorCentro;
+                align-items: $valorCentro;
             }
         }
     }

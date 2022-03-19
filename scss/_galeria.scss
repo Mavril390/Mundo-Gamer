@@ -2,7 +2,7 @@
     .main__contenido{
         .main__contenido__galeria{
             .main__contenido__galeria__titulo{
-                text-align: center;
+                text-align: $valorCentro;
                 margin: 20px;
             }
             .main__contenido__galeria--grid{
@@ -16,12 +16,12 @@
                                     "9 10"
                                     "11 12";
                 
-                justify-items: center;
+                justify-items: $valorCentro;
                 @media only screen and (max-width: 1100px){
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: $valorCentro;
+                    align-items: $valorCentro;
                 }
                 .galeria-img{
                     width: 95%;

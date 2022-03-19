@@ -1,3 +1,11 @@
+/* Variables */
+$valorCentro: center;
+$padding20px: 20px;
+$negro: black;
+$blanco: white;
+$azul: #1f487e;
+$azulOscuro: #0f233d;
+
 * {
     margin: 0;
     padding: 0;
@@ -24,16 +32,16 @@
 }
 
 .producto__img {
-    border: 2px solid #1f487e;
+    border: 2px solid $azul;
     width: 175px;
     height: 175px;
 }
 
 .btn--vinculo {
     background-color: #376996;
-    border: 1px solid black;
+    border: 1px solid $negro;
     font-size: 15px;
-    color: white;
+    color: $blanco;
     text-decoration: none;
     padding: 10px;
     width: 200px;
@@ -43,19 +51,19 @@
 
     &:hover {
         background-color: #d8d4d5;
-        color: #1f487e;
+        color: $azul;
     }
 }
 
 .elementoCentrado {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $valorCentro;
+    align-items: $valorCentro;
 }
 
 .hr {
     margin: 10px;
-    border: 2px solid #1f487e;
+    border: 2px solid $azul;
 }
 
 .info-display {
@@ -64,11 +72,11 @@
 
 .card {
     width: 300px;
-    border: 2px solid black;
-    padding: 20px;
+    border: 2px solid $negro;
+    padding: $padding20px;
     border-radius: 20px;
     background-color: #ead2ac;
-    box-shadow: 0 5px 20px 0 black;
+    box-shadow: 0 5px 20px 0 $negro;
 
     transition: all 1s;
     &:hover{
@@ -77,7 +85,7 @@
 }
 
 .card__titulo {
-    text-align: center;
+    text-align: $valorCentro;
     padding: 15px 0;
 }
 
@@ -93,11 +101,11 @@
 }
 
 .TextCenter {
-    text-align: center;
+    text-align: $valorCentro;
 }
 
 li {
-    text-align: center;
+    text-align: $valorCentro;
 }
 
 .formulario__100w{
@@ -141,7 +149,7 @@ li {
     }
 
     .main__contenido__titulo{
-        padding: 20px 0
+        padding: $padding20px 0
     }
 
     .card{

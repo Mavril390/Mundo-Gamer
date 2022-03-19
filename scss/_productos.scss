@@ -7,19 +7,19 @@
             grid-template-areas: "buscador titulo";
 
             width: 100%;
-            padding: 20px;
+            padding: $padding20px;
             @media only screen and (max-width: 930px){
                 display: contents;
             }
             .main__contenido__titulo{
                 grid-area: titulo;
-                justify-self: center;
+                justify-self: $valorCentro;
             }
             .main__contenido__buscador{
                 grid-area: buscador;
-                justify-self: center;
+                justify-self: $valorCentro;
 
-                background: #fff;
+                background: $blanco;
                 width: 70%;
                 border-radius: 10px;
                 cursor: pointer;

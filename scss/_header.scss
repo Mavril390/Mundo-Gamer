@@ -1,6 +1,6 @@
 .header {
-    background-color: #1f487e;
-    color: white;
+    background-color: $azul;
+    color: $blanco;
     position: sticky;
     padding: 10px;
     .navbar {
@@ -11,13 +11,13 @@
                 list-style: none;
                 .nav-item {
                     .header__navegacion__lista__elemento {
-                        color: white;
+                        color: $blanco;
                         border-radius: 10px;
                         transition: all 0.5s;
 
                         &:hover{
-                            color: white;
-                            background-color: #0f233d;
+                            color: $blanco;
+                            background-color: $azulOscuro;
                         }
                     }
                 }
