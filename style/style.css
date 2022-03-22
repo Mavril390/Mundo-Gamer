@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Variables */
 * {
   margin: 0;
   padding: 0;
@@ -149,7 +150,7 @@ li {
         background-image: url("../Imagenes/info__sobreNosotros.jpg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: center;
         width: 100vw;
         height: 75vh; }
         .main .main__contenido .main__contenido__info .main__contenido__info__sobreNosotros .main__contenido__info--centrado .main__contenido__sobreNosotros__txt {
@@ -214,7 +215,7 @@ li {
   .main .main__contenido .main__contenido--grid .main__contenido__buscador {
     grid-area: buscador;
     justify-self: center;
-    background: #fff;
+    background: white;
     width: 70%;
     border-radius: 10px;
     cursor: pointer;
@@ -381,8 +382,18 @@ li {
     display: inline-block;
     font-size: 30px;
     padding-right: 30px; }
-  .footer .footer__redes .footer__redes__logo {
-    font-size: 30px; }
+  .footer .footer__redes .footer__redes__twitter, .footer .footer__redes .footer__redes__facebook, .footer .footer__redes .footer__redes__instagram {
+    background: #1d9bf0; }
+  .footer .footer__redes .footer__redes__facebook {
+    background: #4867aa; }
+  .footer .footer__redes .footer__redes__instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+  .footer .footer__redes .footer__redes__twitter, .footer .footer__redes .footer__redes__facebook, .footer .footer__redes .footer__redes__instagram {
+    font-size: 30px;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    margin: 10px; }
   .footer .footer__copyrigth .footer__copyrigth__texto {
     padding-top: 10px;
     margin-bottom: 0px;

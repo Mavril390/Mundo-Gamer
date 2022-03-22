@@ -1,3 +1,20 @@
+$fondoRedes:(
+    twitter: #1d9bf0,
+    facebook: #4867aa,
+    instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%),
+);
+
+$estilosRedes:(
+    font-size: 30px,
+    border-radius: 15px,
+    color: white
+);
+
+@mixin paddingYMargin($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
 .footer{
     background-color: #d8d4d5;
     padding: $padding20px;
@@ -9,8 +26,22 @@
             font-size: 30px;
             padding-right: 30px;
         }
-        .footer__redes__logo{
-            font-size: 30px;
+        @each $red, $background in $fondoRedes {
+            .footer__redes__#{$red}{
+                background: $background;
+            }
+        }
+        .footer__redes__twitter{
+            font-size: map-get($estilosRedes, font-size);
+            border-radius: map-get($estilosRedes, border-radius);
+            color: map-get($estilosRedes, color);
+            @include paddingYMargin(10px, 10px);
+        }
+        .footer__redes__facebook{
+            @extend .footer__redes__twitter;
+        }
+        .footer__redes__instagram{
+            @extend .footer__redes__twitter;
         }
     }
     .footer__copyrigth{
