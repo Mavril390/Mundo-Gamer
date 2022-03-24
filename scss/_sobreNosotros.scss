@@ -57,6 +57,9 @@
                 flex-wrap: wrap;
                 justify-content: $valorCentro;
                 align-items: $valorCentro;
+                .marca{
+                    padding: 30px;
+                }
             }
         }
     }

@@ -21,10 +21,14 @@ $estilosRedes:(
 
     border-top: 1px solid $negro;
     .footer__redes{
+        text-align: center;
         .footer__redes__titulo{
             display: inline-block;
             font-size: 30px;
             padding-right: 30px;
+            @media only screen and (max-width: 495px){
+                padding-right: 0;
+            } 
         }
         @each $red, $background in $fondoRedes {
             .footer__redes__#{$red}{

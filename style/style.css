@@ -69,9 +69,60 @@
   text-align: justify; }
 
 .producto {
-  transition: all 1s; }
+  transition: all 1s;
+  width: 80%; }
+  @media only screen and (max-width: 991px) {
+    .producto {
+      width: 100%; } }
   .producto:hover {
     transform: scale(1.1, 1.1); }
+  .producto .producto__info .producto__info--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img nombre nombre" "img precio comprar"; }
+    @media only screen and (max-width: 767px) {
+      .producto .producto__info .producto__info--grid {
+        grid-template-areas: "img nombre" "precio comprar"; } }
+    @media only screen and (max-width: 540px) {
+      .producto .producto__info .producto__info--grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "img" "nombre" "precio" "comprar"; } }
+    .producto .producto__info .producto__info--grid .producto__img {
+      grid-area: img;
+      justify-self: center; }
+      .producto .producto__info .producto__info--grid .producto__img img {
+        width: 100%;
+        height: 100%; }
+    .producto .producto__info .producto__info--grid .producto__info__nombre {
+      grid-area: nombre;
+      align-self: center;
+      font-size: 20px;
+      margin: 0; }
+      @media only screen and (max-width: 540px) {
+        .producto .producto__info .producto__info--grid .producto__info__nombre {
+          text-align: center; } }
+    .producto .producto__info .producto__info--grid .producto__info__precio {
+      grid-area: precio;
+      justify-self: center;
+      align-self: center;
+      font-size: 20px;
+      margin: 0; }
+      @media only screen and (max-width: 767px) {
+        .producto .producto__info .producto__info--grid .producto__info__precio {
+          align-self: start; } }
+    .producto .producto__info .producto__info--grid .producto__info__comprar {
+      grid-area: comprar;
+      justify-self: center;
+      align-self: center;
+      height: 50%; }
+      @media only screen and (max-width: 767px) {
+        .producto .producto__info .producto__info--grid .producto__info__comprar {
+          height: 30%;
+          align-self: start; } }
+      @media only screen and (max-width: 540px) {
+        .producto .producto__info .producto__info--grid .producto__info__comprar {
+          height: 100%; } }
 
 .TextCenter {
   text-align: center; }
@@ -139,6 +190,9 @@ li {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center; }
+        @media only screen and (max-width: 767px) {
+          .main .main__contenido .main__contenido__prodDestacados .prodDestacados--position {
+            display: block; } }
     .main .main__contenido .main__contenido__info {
       padding-top: 20px; }
       .main .main__contenido .main__contenido__info .main__contenido__info--centrado {
@@ -277,6 +331,8 @@ li {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; }
+    .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca {
+      padding: 30px; }
 
 /* Sección Galeria */
 .main .main__contenido .main__contenido__galeria .main__contenido__galeria__titulo {
@@ -378,22 +434,27 @@ li {
   background-color: #d8d4d5;
   padding: 20px;
   border-top: 1px solid black; }
-  .footer .footer__redes .footer__redes__titulo {
-    display: inline-block;
-    font-size: 30px;
-    padding-right: 30px; }
-  .footer .footer__redes .footer__redes__twitter, .footer .footer__redes .footer__redes__facebook, .footer .footer__redes .footer__redes__instagram {
-    background: #1d9bf0; }
-  .footer .footer__redes .footer__redes__facebook {
-    background: #4867aa; }
-  .footer .footer__redes .footer__redes__instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-  .footer .footer__redes .footer__redes__twitter, .footer .footer__redes .footer__redes__facebook, .footer .footer__redes .footer__redes__instagram {
-    font-size: 30px;
-    border-radius: 15px;
-    color: white;
-    padding: 10px;
-    margin: 10px; }
+  .footer .footer__redes {
+    text-align: center; }
+    .footer .footer__redes .footer__redes__titulo {
+      display: inline-block;
+      font-size: 30px;
+      padding-right: 30px; }
+      @media only screen and (max-width: 495px) {
+        .footer .footer__redes .footer__redes__titulo {
+          padding-right: 0; } }
+    .footer .footer__redes .footer__redes__twitter, .footer .footer__redes .footer__redes__facebook, .footer .footer__redes .footer__redes__instagram {
+      background: #1d9bf0; }
+    .footer .footer__redes .footer__redes__facebook {
+      background: #4867aa; }
+    .footer .footer__redes .footer__redes__instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .footer .footer__redes .footer__redes__twitter, .footer .footer__redes .footer__redes__facebook, .footer .footer__redes .footer__redes__instagram {
+      font-size: 30px;
+      border-radius: 15px;
+      color: white;
+      padding: 10px;
+      margin: 10px; }
   .footer .footer__copyrigth .footer__copyrigth__texto {
     padding-top: 10px;
     margin-bottom: 0px;

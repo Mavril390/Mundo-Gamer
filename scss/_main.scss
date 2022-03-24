@@ -39,6 +39,10 @@
                 flex-wrap: wrap;
                 align-items: $valorCentro;
                 justify-content: $valorCentro;
+
+                @media only screen and (max-width: 767px){
+                    display: block;
+                }
             }
         }
         .main__contenido__info {
