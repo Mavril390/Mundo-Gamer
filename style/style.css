@@ -68,62 +68,6 @@
 .card__parrafo {
   text-align: justify; }
 
-.producto {
-  transition: all 1s;
-  width: 80%; }
-  @media only screen and (max-width: 991px) {
-    .producto {
-      width: 100%; } }
-  .producto:hover {
-    transform: scale(1.1, 1.1); }
-  .producto .producto__info .producto__info--grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "img nombre nombre" "img precio comprar"; }
-    @media only screen and (max-width: 767px) {
-      .producto .producto__info .producto__info--grid {
-        grid-template-areas: "img nombre" "precio comprar"; } }
-    @media only screen and (max-width: 540px) {
-      .producto .producto__info .producto__info--grid {
-        grid-template-columns: 1fr;
-        grid-template-areas: "img" "nombre" "precio" "comprar"; } }
-    .producto .producto__info .producto__info--grid .producto__img {
-      grid-area: img;
-      justify-self: center; }
-      .producto .producto__info .producto__info--grid .producto__img img {
-        width: 100%;
-        height: 100%; }
-    .producto .producto__info .producto__info--grid .producto__info__nombre {
-      grid-area: nombre;
-      align-self: center;
-      font-size: 20px;
-      margin: 0; }
-      @media only screen and (max-width: 540px) {
-        .producto .producto__info .producto__info--grid .producto__info__nombre {
-          text-align: center; } }
-    .producto .producto__info .producto__info--grid .producto__info__precio {
-      grid-area: precio;
-      justify-self: center;
-      align-self: center;
-      font-size: 20px;
-      margin: 0; }
-      @media only screen and (max-width: 767px) {
-        .producto .producto__info .producto__info--grid .producto__info__precio {
-          align-self: start; } }
-    .producto .producto__info .producto__info--grid .producto__info__comprar {
-      grid-area: comprar;
-      justify-self: center;
-      align-self: center;
-      height: 50%; }
-      @media only screen and (max-width: 767px) {
-        .producto .producto__info .producto__info--grid .producto__info__comprar {
-          height: 30%;
-          align-self: start; } }
-      @media only screen and (max-width: 540px) {
-        .producto .producto__info .producto__info--grid .producto__info__comprar {
-          height: 100%; } }
-
 .TextCenter {
   text-align: center; }
 
@@ -283,6 +227,71 @@ li {
 .main .main__contenido .main__contenido__productos {
   flex-wrap: wrap; }
 
+.producto {
+  transition: all 1s;
+  width: 80%; }
+  @media only screen and (max-width: 991px) {
+    .producto {
+      width: 100%; } }
+  .producto:hover {
+    transform: scale(1.1, 1.1); }
+  @media only screen and (max-width: 767px) {
+    .producto {
+      padding: 0; } }
+  @media only screen and (max-width: 540px) {
+    .producto {
+      padding: 30px; } }
+  .producto .producto__info .producto__info--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img nombre nombre" "img precio comprar"; }
+    @media only screen and (max-width: 767px) {
+      .producto .producto__info .producto__info--grid {
+        grid-template-rows: 1fr 120px;
+        grid-template-areas: "img nombre" "precio comprar"; } }
+    @media only screen and (max-width: 540px) {
+      .producto .producto__info .producto__info--grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "img" "nombre" "precio" "comprar";
+        border: 1px solid black;
+        padding: 5px; } }
+    .producto .producto__info .producto__info--grid .producto__img {
+      grid-area: img;
+      justify-self: center; }
+      .producto .producto__info .producto__info--grid .producto__img img {
+        width: 100%;
+        height: 100%; }
+    .producto .producto__info .producto__info--grid .producto__info__nombre {
+      grid-area: nombre;
+      align-self: center;
+      font-size: 20px;
+      margin: 0; }
+      @media only screen and (max-width: 540px) {
+        .producto .producto__info .producto__info--grid .producto__info__nombre {
+          text-align: center; } }
+    .producto .producto__info .producto__info--grid .producto__info__precio {
+      grid-area: precio;
+      justify-self: center;
+      align-self: center;
+      font-size: 20px;
+      margin: 0; }
+      @media only screen and (max-width: 767px) {
+        .producto .producto__info .producto__info--grid .producto__info__precio {
+          align-self: start; } }
+    .producto .producto__info .producto__info--grid .producto__info__comprar {
+      grid-area: comprar;
+      justify-self: center;
+      align-self: center;
+      height: 50%; }
+      @media only screen and (max-width: 767px) {
+        .producto .producto__info .producto__info--grid .producto__info__comprar {
+          height: 40%;
+          align-self: start; } }
+      @media only screen and (max-width: 540px) {
+        .producto .producto__info .producto__info--grid .producto__info__comprar {
+          height: 100%; } }
+
 /* Sección Sobre Nosotros */
 .main .main__contenido .main__contenido--sobreNosotros {
   padding-top: 20px; }
@@ -333,6 +342,62 @@ li {
     align-items: center; }
     .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca {
       padding: 30px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--amd {
+        background-image: url("../Imagenes/marcas/amd.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--corsair {
+        background-image: url("../Imagenes/marcas/corsair.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--geforce {
+        background-image: url("../Imagenes/marcas/geforce.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--intel {
+        background-image: url("../Imagenes/marcas/intel.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--logitech {
+        background-image: url("../Imagenes/marcas/logitech.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--seagate {
+        background-image: url("../Imagenes/marcas/seagate.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--trust {
+        background-image: url("../Imagenes/marcas/trust.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
+      .main .main__contenido .main__contenido__marcas .main__contenido__marcas--marcas .marca .marca--western-digital {
+        background-image: url("../Imagenes/marcas/western-digital.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        width: 100px; }
 
 /* Sección Galeria */
 .main .main__contenido .main__contenido__galeria .main__contenido__galeria__titulo {
@@ -359,75 +424,71 @@ li {
       transform: scale(1.1, 1.1); }
 
 /* Sección Contacto */
-.main .main__contenido .main__contenido__tituloContacto {
-  text-align: center;
-  padding-top: 20px; }
-
-.main .main__contenido .main__contenido__parrafoContacto {
-  text-align: center;
-  padding-top: 20px; }
-
-.main .main__contenido .main__contenido__datosDeLaTienda .main__contenido__datosDeLaTienda--grid {
+.main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "correo ubicacion" "telefono ubicacion";
+  grid-template-rows: 400px 1fr;
+  grid-template-areas: "informacion formulario" "ubicacion ubicacion";
   justify-items: center;
-  align-items: center; }
-  @media only screen and (max-width: 1100px) {
-    .main .main__contenido .main__contenido__datosDeLaTienda .main__contenido__datosDeLaTienda--grid {
-      display: block; } }
-  .main .main__contenido .main__contenido__datosDeLaTienda .main__contenido__datosDeLaTienda--grid .datosDeLaTienda__correo {
-    grid-area: correo;
-    padding: 20px; }
-  .main .main__contenido .main__contenido__datosDeLaTienda .main__contenido__datosDeLaTienda--grid .datosDeLaTienda__telefono {
-    grid-area: telefono;
-    padding: 20px; }
-  .main .main__contenido .main__contenido__datosDeLaTienda .main__contenido__datosDeLaTienda--grid .datosDeLaTienda__ubicacion {
+  align-items: center;
+  padding: 20px; }
+  @media only screen and (max-width: 995px) {
+    .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px 300px 1fr;
+      grid-template-areas: "informacion" "formulario" "ubicacion"; } }
+  .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__informacion {
+    grid-area: informacion;
+    padding: 20px;
+    background-color: white;
+    width: 90%;
+    height: 100%; }
+    @media only screen and (max-width: 995px) {
+      .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__informacion {
+        width: 95%;
+        margin-top: 20px; } }
+  .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__formulario {
+    grid-area: formulario;
+    padding: 20px;
+    background-color: white;
+    width: 90%;
+    height: 100%; }
+    @media only screen and (max-width: 995px) {
+      .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__formulario {
+        width: 95%;
+        margin-top: 20px; } }
+    .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__formulario #main__contenido__contacto__formulario--form {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      flex-wrap: wrap; }
+      .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__formulario #main__contenido__contacto__formulario--form #form--nombre {
+        width: 40%;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 10px; }
+      .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__formulario #main__contenido__contacto__formulario--form #form--correo {
+        width: 40%;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 10px; }
+      .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__formulario #main__contenido__contacto__formulario--form #form--descripcion {
+        width: 82%;
+        height: 100px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 10px; }
+      .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__formulario #main__contenido__contacto__formulario--form #form--enviar {
+        width: 82%;
+        margin: 5px;
+        padding: 5px; }
+  .main .main__contenido .main__contenido__contacto .main__contenido__contacto--grid .main__contenido__contacto__ubicacion {
     grid-area: ubicacion;
-    width: 100%; }
-    .main .main__contenido .main__contenido__datosDeLaTienda .main__contenido__datosDeLaTienda--grid .datosDeLaTienda__ubicacion .datosDeLaTienda__ubicacion__mapa {
-      border: 1px solid black;
-      width: 100%;
-      height: 200px; }
-
-.main .main__contenido .main__contenido__parrafo {
-  text-align: center;
-  padding-top: 50px; }
-
-.main .main__contenido .main__contenido__formulario {
-  width: 50%; }
-  .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "nombre correo" "descripcion descripcion" "btn btn";
-    justify-items: center;
-    align-items: center;
-    column-gap: 50px; }
-    @media only screen and (max-width: 1100px) {
-      .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid {
-        display: block; } }
-    .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid .formulario__nombre {
-      grid-area: nombre;
-      width: 100%; }
-      @media only screen and (max-width: 1100px) {
-        .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid .formulario__nombre {
-          padding: 20px; } }
-    .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid .formulario__correo {
-      grid-area: correo;
-      width: 100%; }
-      @media only screen and (max-width: 1100px) {
-        .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid .formulario__correo {
-          padding: 20px; } }
-    .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid .formulario__descripcion {
-      grid-area: descripcion;
-      width: 100%; }
-      @media only screen and (max-width: 1100px) {
-        .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid .formulario__descripcion {
-          padding: 20px; } }
-    .main .main__contenido .main__contenido__formulario .main__contenido__formulario--grid .formulario__btn {
-      grid-area: btn;
-      padding: 20px; }
+    padding: 20px;
+    margin-top: 20px;
+    background-color: white;
+    width: 95%;
+    height: 100%; }
 
 /* Estilos del Footer */
 .footer {

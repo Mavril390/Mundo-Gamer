@@ -1,88 +1,89 @@
 .main{
     .main__contenido{
-        .main__contenido__tituloContacto{
-            text-align: $valorCentro;
-            padding-top: $padding20px;
-        }
-        .main__contenido__parrafoContacto{
-            text-align: $valorCentro;
-            padding-top: $padding20px;
-        }
-        .main__contenido__datosDeLaTienda{
-            .main__contenido__datosDeLaTienda--grid{
+        .main__contenido__contacto{
+            .main__contenido__contacto--grid{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                grid-template-areas: "correo ubicacion"
-                                    "telefono ubicacion";
+                grid-template-rows: 400px 1fr;
+                grid-template-areas: "informacion formulario"
+                                     "ubicacion ubicacion";
+                justify-items: center;
+                align-items: center;
+                padding: 20px;
+                @media only screen and (max-width: 995px){
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 400px 300px 1fr;
+                    grid-template-areas: "informacion"
+                                         "formulario"
+                                         "ubicacion"
+                }
+                
+                .main__contenido__contacto__informacion{
+                    grid-area: informacion;
+                    padding: 20px;
+                    background-color: $blanco;
+                    width: 90%;
+                    height: 100%;
+                    @media only screen and (max-width: 995px){
+                        width: 95%;
+                        margin-top: 20px;
+                    }
+                }
+                
+                .main__contenido__contacto__formulario{
+                    grid-area: formulario;
+                    padding: 20px;
+                    background-color: $blanco;
+                    width: 90%;
+                    height: 100%;
+                    @media only screen and (max-width: 995px){
+                        width: 95%;
+                        margin-top: 20px;
+                    }
 
-                justify-items: $valorCentro;
-                align-items: $valorCentro;
-                @media only screen and (max-width: 1100px){
-                    display: block;
+                    #main__contenido__contacto__formulario--form{
+                        display: flex;
+                        justify-content: center;
+                        align-self: center;
+                        flex-wrap: wrap;
+
+                        #form--nombre{
+                            width: 40%;
+                            margin: 5px;
+                            padding: 5px;
+                            border-radius: 10px;
+                        }
+
+                        #form--correo{
+                            width: 40%;
+                            margin: 5px;
+                            padding: 5px;
+                            border-radius: 10px;
+                        }
+
+                        #form--descripcion{
+                            width: 82%;
+                            height: 100px;
+                            margin: 5px;
+                            padding: 5px;
+                            border-radius: 10px;
+                        }
+
+                        #form--enviar{
+                            width: 82%;
+                            margin: 5px;
+                            padding: 5px;
+                        }
+                    }
                 }
-                .datosDeLaTienda__correo{
-                    grid-area: correo;
-                    padding: $padding20px;
-                }
-                .datosDeLaTienda__telefono{
-                    grid-area: telefono;
-                    padding: $padding20px;
-                }
-                .datosDeLaTienda__ubicacion{
+
+                .main__contenido__contacto__ubicacion{
                     grid-area: ubicacion;
-                    width: 100%;
-                    .datosDeLaTienda__ubicacion__mapa{
-                        border: 1px solid black;
-                        width: 100%;
-                        height: 200px;
-                    }
-                }
-            }
-        }
-        .main__contenido__parrafo{
-            text-align: $valorCentro;
-            padding-top: 50px;
-        }
-        .main__contenido__formulario{
-            width: 50%;
-            .main__contenido__formulario--grid{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas: "nombre correo"
-                                     "descripcion descripcion"
-                                     "btn btn";
-            
-                justify-items: $valorCentro;
-                align-items: $valorCentro;
-                column-gap: 50px;
-                @media only screen and (max-width: 1100px){
-                    display: block;
-                }
-                .formulario__nombre{
-                    grid-area: nombre;
-                    width: 100%;
-                    @media only screen and (max-width: 1100px){
-                        padding: $padding20px;
-                    }
-                }
-                .formulario__correo{
-                    grid-area: correo;
-                    width: 100%;
-                    @media only screen and (max-width: 1100px){
-                        padding: $padding20px;
-                    }
-                }
-                .formulario__descripcion{
-                    grid-area: descripcion;
-                    width: 100%;
-                    @media only screen and (max-width: 1100px){
-                        padding: $padding20px;
-                    }
-                }
-                .formulario__btn{
-                    grid-area: btn;
-                    padding: $padding20px;
+                    padding: 20px;
+                    margin-top: 20px;
+                    background-color: $blanco;
+                    width: 95%;
+                    height: 100%;
                 }
             }
         }

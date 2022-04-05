@@ -1,3 +1,14 @@
+$marca:(
+    amd: url('../Imagenes/marcas/amd.png'),
+    corsair: url('../Imagenes/marcas/corsair.png'),
+    geforce: url('../Imagenes/marcas/geforce.png'),
+    intel: url('../Imagenes/marcas/intel.png'),
+    logitech: url('../Imagenes/marcas/logitech.png'),
+    seagate: url('../Imagenes/marcas/seagate.png'),
+    trust: url('../Imagenes/marcas/trust.png'),
+    western-digital: url('../Imagenes/marcas/western-digital.png')
+);
+
 .main{
     .main__contenido{
         .main__contenido--sobreNosotros{
@@ -59,6 +70,16 @@
                 align-items: $valorCentro;
                 .marca{
                     padding: 30px;
+                    @each $marca, $img in $marca {
+                        .marca--#{$marca}{
+                            background-image: #{$img};
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: center;
+                            height: 100px;
+                            width: 100px;
+                        }
+                    }
                 }
             }
         }
