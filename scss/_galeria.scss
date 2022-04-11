@@ -1,3 +1,14 @@
+$imagenesSetUp:(
+    setUp1: "../Imagenes/galeria/SetUp1.jpg",
+    setUp2: "../Imagenes/galeria/SetUp2.jpg",
+    setUp3: "../Imagenes/galeria/SetUp3.png",
+    setUp4: "../Imagenes/galeria/SetUp4.jpg",
+    setUp5: "../Imagenes/galeria/SetUp5.jpg",
+    setUp6: "../Imagenes/galeria/SetUp6.jpg",
+    setUp7: "../Imagenes/galeria/SetUp7.jpg",
+    setUp8: "../Imagenes/galeria/SetUp8.jpg"
+);
+
 .main{
     .main__contenido{
         .main__contenido__galeria{
@@ -8,13 +19,11 @@
             .main__contenido__galeria--grid{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
                 grid-template-areas: "1 2"
                                     "3 4"
                                     "5 6"
-                                    "7 8"
-                                    "9 10"
-                                    "11 12";
+                                    "7 8";
                 
                 justify-items: $valorCentro;
                 @media only screen and (max-width: 1100px){
@@ -23,14 +32,35 @@
                     justify-content: $valorCentro;
                     align-items: $valorCentro;
                 }
+
+                @each $num, $imagen in $imagenesSetUp {
+                    .galeria-img__#{$num}{
+                        background-image: url($imagen);
+                    }
+                }
                 .galeria-img{
                     width: 95%;
+                    height: 400px;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
                     padding: 20px;
+                    margin: 20px;
 
                     transition: all 1s;
 
                     &:hover{
                         transform: scale(1.1, 1.1);
+                    }
+                    @media only screen and (max-width: 768px){
+                        height: 300px;
+                    }
+                    @media only screen and (max-width: 575px){
+                        background-size: contain;
+                    }
+                    @media only screen and (max-width: 475px){
+                        padding: 0;
+                        margin: 0;
                     }
                 }
             }
